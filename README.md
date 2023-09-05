@@ -38,3 +38,7 @@ Identical to vanilla JavaScript, but with `: string` appended to the variable na
 
 ## Exercise 2: Browser View
 Create an HTML file, use the TS script inside it to create a H1 element on the page that will contain the text of the `message` variable.
+
+> "Note that the app.js is the output file of the app.ts file, therefore, you should never directly change the code in this file, or you’ll lose the changes once you recompile the app.ts file." - TypeScript Tutorial.net
+
+
