@@ -2,7 +2,8 @@
 
 The following exercises are from [typescriptutorial.net](https://www.typescripttutorial.net/)
 
-## Exercise 1: Hellow World!
+## Set up
+
 - Install typescript compiler and check the version: 
     ```sh
     npm install -g typescript 
@@ -26,3 +27,13 @@ The following exercises are from [typescriptutorial.net](https://www.typescriptt
     ```sh
     ts-node app.ts
     ```
+
+## Exercise 1: Hellow World!
+Create a hello world Typescript file and compile it to JavaScript using the commands above and the following code block:
+```ts
+let message: string = 'Hello, World!';
+console.log(message);
+```
+Identical to vanilla JavaScript, but with `: string` appended to the variable name to define its expected type.
+
+## Exercise 2: Browser View
