@@ -28,7 +28,7 @@ The following exercises are from [typescriptutorial.net](https://www.typescriptt
     ts-node app.ts
     ```
 
-## Exercise 1: Hellow World!
+## Exercise 1: Hello World!
 Create a hello world Typescript file and compile it to JavaScript using the commands above and the following code block:
 ```ts
 let message: string = 'Hello, World!';
@@ -37,3 +37,4 @@ console.log(message);
 Identical to vanilla JavaScript, but with `: string` appended to the variable name to define its expected type.
 
 ## Exercise 2: Browser View
+Create an HTML file, use the TS script inside it to create a H1 element on the page that will contain the text of the `message` variable.
