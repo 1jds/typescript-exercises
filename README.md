@@ -36,9 +36,39 @@ console.log(message);
 ```
 Identical to vanilla JavaScript, but with `: string` appended to the variable name to define its expected type.
 
-## Exercise 2: Browser View
+## Exercise 2: View in Browser
 Create an HTML file, use the TS script inside it to create a H1 element on the page that will contain the text of the `message` variable.
 
 > "Note that the app.js is the output file of the app.ts file, therefore, you should never directly change the code in this file, or you’ll lose the changes once you recompile the app.ts file." - TypeScript Tutorial.net
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript: Hello, World!</title>
+</head>
+<body>
+    <script src="app.js"></script>
+</body>
+</html>
+```
 
+```ts
+let message: string = 'Hello, World!';
+// create a new heading 1 element
+let heading = document.createElement('h1');
+heading.textContent = message;
+// add the heading to the document
+document.body.appendChild(heading);
+```
+
+## TypeScript Types
+
+The different types have different **properties** and **methods**. For example, a string such as `Hello World` has a `length` property, and a `toLocaleUpperCase()` method.
+
+There are 'primitive' types and 'object' types as normal.
+
+## Type Annotation
+TypeScript uses annotations to  
