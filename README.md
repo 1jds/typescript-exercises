@@ -68,7 +68,18 @@ document.body.appendChild(heading);
 
 The different types have different **properties** and **methods**. For example, a string such as `Hello World` has a `length` property, and a `toLocaleUpperCase()` method.
 
-There are 'primitive' types and 'object' types as normal.
+There are 'primitive' types and 'object' types, as normal in JavaScript.
 
 ## Type Annotation
-TypeScript uses annotations to  
+TypeScript uses annotations to explicitly indicate what the type of a variable (or other) is. The syntax for this is `: type` after the variable name. For e.g.:
+### Primitives
+```ts
+let name: string = 'John';
+let age: number = 25;
+let active: boolean = true;
+```
+### Arrays
+To set an array whose values are consistently of only one type, use `: type[]` as in the following example:
+```ts
+let names: string[] = ['Steve', 'Matt', 'Suzie', 'Deepshika', 'Olivia'];
+```
