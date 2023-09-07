@@ -84,6 +84,16 @@ To set an array whose values are consistently of only one type, use `: type[]` a
 let names: string[] = ['Steve', 'Matt', 'Suzie', 'Deepshika', 'Olivia'];
 ```
 
+The `readonly` keyword can prevent arrays from being augmented:
+```ts
+const namesArr: readonly string[] = ["Susan"];
+names.push("Jill"); // Error: Property 'push' does not exist on type 'readonly string[]'. try removing the readonly modifier and see if it works?
+```
+The above example is from [W3 Schools](https://www.w3schools.com/typescript/typescript_arrays.php).
+
+### Tuples
+Tuples can be used stand alone, or as part of a multi-dimensional array.
+
 ### Implicit Typing
 If no type is explicitly assigned to, for e.g., a variable, then TypeScript will implicity assign one. For example, for the code below, TypeScript would infer that `name` is of type `string` because of the value with which it is initialised.
 ```ts
