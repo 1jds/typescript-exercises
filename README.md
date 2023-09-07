@@ -83,3 +83,9 @@ To set an array whose values are consistently of only one type, use `: type[]` a
 ```ts
 let names: string[] = ['Steve', 'Matt', 'Suzie', 'Deepshika', 'Olivia'];
 ```
+
+### Implicit Typing
+If no type is explicitly assigned to, for e.g., a variable, then TypeScript will implicity assign one. For example, for the code below, TypeScript would infer that `name` is of type `string` because of the value with which it is initialised.
+```ts
+let name = 'John';
+```
