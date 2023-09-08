@@ -108,6 +108,38 @@ const varName: [number, boolean, string][];
 varName = [[1, true, "Jess"], [2, false, "Bob"], [3, true, "Jake"]];
 ```
 
+### Object Typing
+To type a single object, the syntax is as follows:
+```ts
+const user: { firstName: string, lastName: string, birthYear: number, online: boolean } = {
+  firstName: "John",
+  lastName: "Smith",
+  birthYear: 1954,
+  online: false
+};
+```
+Obviously, it would often be more useful to be able to reuse the 'user' type above. That's where interfaces come in.
+
+To make a key-value pair optional, the property name can be followed by a question mark as in the syntax example below:
+```ts
+const dog: { 
+  petName: string, 
+  cute?: boolean 
+} = { 
+  petName: "Mochi" 
+};
+```
+Without the `?` which makes 'cute' optional, an error will be returned, as in the following example:
+```ts
+const cat: { 
+  petName: string, 
+  cute: boolean 
+} = { 
+  petName: "Meowchi" 
+};
+// error TS2741: Property 'cute' is missing in type '{ petName: string; }' but required in type '{ petName: string; cute: boolean; }'    
+```
+
 ### Implicit Typing
 If no type is explicitly assigned to, for e.g., a variable, then TypeScript will implicity assign one. For example, for the code below, TypeScript would infer that `name` is of type `string` because of the value with which it is initialised.
 ```ts
