@@ -92,7 +92,21 @@ names.push("Jill"); // Error: Property 'push' does not exist on type 'readonly s
 The above example is from [W3 Schools](https://www.w3schools.com/typescript/typescript_arrays.php).
 
 ### Tuples
-Tuples can be used stand alone, or as part of a multi-dimensional array.
+A tuple is a way of storing multiple data items in a single variable. To type a tuple, we do the following in TypeScript:
+```ts
+// define a tuple with types
+const varName: [number, boolean, string];
+
+// initialize with the correct types
+varName = [6, true, 'string value'];
+```
+ 
+Tuples can be used stand alone, or as part of a multi-dimensional array. E.g.
+```ts
+const varName: [number, boolean, string][];
+// employee id, is admin access, first name
+varName = [[1, true, "Jess"], [2, false, "Bob"], [3, true, "Jake"]];
+```
 
 ### Implicit Typing
 If no type is explicitly assigned to, for e.g., a variable, then TypeScript will implicity assign one. For example, for the code below, TypeScript would infer that `name` is of type `string` because of the value with which it is initialised.
