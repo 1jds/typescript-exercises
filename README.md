@@ -140,6 +140,95 @@ const cat: {
 // error TS2741: Property 'cute' is missing in type '{ petName: string; }' but required in type '{ petName: string; cute: boolean; }'    
 ```
 
+### Interfaces & Aliases
+To make a reusable type, we have to define it separately as its own pattern separate from the object or variable which uses it. Interfaces and Aliases allow for this reusability.
+
+For example, to create an object alias:
+```ts
+type Customer = {
+  firstName: string;
+  lastName: string;
+  mobileNumber: number;
+  isMember: boolean;
+};
+
+```
+To make an interface with the same types for an object pattern, the following syntax would be used:
+
+```ts
+interface Customer {
+  firstName: string;
+  lastName: string;
+  mobileNumber: number;
+  isMember: boolean;
+}
+```
+
+To create an array alias, the syntax is as follows for an alias:
+```ts
+type CustomerNames = string[];
+```
+
+And as follows for an interface:
+
+```ts
+interface CustomerNames {
+  [index: number]: string;
+}
+```
+
+Although, W3 schools states that "Interfaces are similar to type aliases, except they only apply to object types." So, maybe one could argue that the interface above is not a proper array?
+
+#### Composing and extending aliases and interfaces
+Type aliases and interfaces can both extend/compose objects together, as in the following examples:
+
+```ts
+interface Rectangle {
+  height: number,
+  width: number
+}
+
+interface ColoredRectangle extends Rectangle {
+  color: string
+}
+
+const coloredRectangle: ColoredRectangle = {
+  height: 20,
+  width: 10,
+  color: "red"
+};
+
+// Source: W3 Schools
+```
+
+
+Or
+```ts
+type Name = {
+  firstName: string;
+  lastName: string;
+};
+type PhoneNumber = {
+  landline: string;
+  mobile: string;
+};
+type Contact = Name & PhoneNumber;
+
+interface Name {
+  firstName: string;
+  lastName: string;
+}
+interface PhoneNumber {
+  landline: string;
+  mobile: string;
+}
+interface Contact extends Name, PhoneNumber {}
+
+// Source: Carl Rippon - see link below
+```
+
+Carl Rippon [in this helpful article which compares the two](https://www.carlrippon.com/when-to-use-type-aliases-v-interfaces/) recommends generally using aliases, notes that both interfaces and aliases have some features that the others don't, but concludes that the most important thing is to be consistent to avoid confusion.
+
 ### Implicit Typing
 If no type is explicitly assigned to, for e.g., a variable, then TypeScript will implicity assign one. For example, for the code below, TypeScript would infer that `name` is of type `string` because of the value with which it is initialised.
 ```ts
