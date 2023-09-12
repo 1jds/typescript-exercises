@@ -229,8 +229,44 @@ interface Contact extends Name, PhoneNumber {}
 
 Carl Rippon [in this helpful article which compares the two](https://www.carlrippon.com/when-to-use-type-aliases-v-interfaces/) recommends generally using aliases, notes that both interfaces and aliases have some features that the others don't, but concludes that the most important thing is to be consistent to avoid confusion.
 
+### Union Types
+Untion types are either/or types. These are expressed with a 'pipe' operator `|` . For example:
+```ts
+function printStatusCode(code: string | number) {
+  console.log(`My status code is ${code}.`)
+}
+printStatusCode(404);
+printStatusCode('404');
+
+// Source: W3 Schools
+```
+
+#### Problems with using unions
+
+Using union types opens the door to potential difficulties. For example, (in the example above) if the error code coming in is of type `number` but the function it's coming into employs string methods on the parameter then there will be errors.
+
+So, in a sense, while using a union might be useful (or even necessary) it also goes against the whole emphasis of TypeScript which is towards locking down the types to avoid such bugs.  
+
+### Functions
+
+For functions which don't return a 'value' <em>per se</em>, such as those which only trigger side-effects such as a `console.log`, then the return type can be set to `void`.
+
 ### Implicit Typing
 If no type is explicitly assigned to, for e.g., a variable, then TypeScript will implicity assign one. For example, for the code below, TypeScript would infer that `name` is of type `string` because of the value with which it is initialised.
 ```ts
 let name = 'John';
 ```
+
+### Resources
+
+#### The Docs!
+- [Microsoft TypeScript Docs](https://www.typescriptlang.org/)
+
+#### React
+- [Cheatsheets for Using TypeScript with React](https://react-typescript-cheatsheet.netlify.app/)
+
+#### TypeScript in VS Code
+- [Setup for TypeScript in VS Code](https://code.visualstudio.com/docs/languages/typescript)
+
+#### Beginner's Guide & Cheatsheet
+- [Beginner's Guide from FCC](https://www.freecodecamp.org/news/learn-typescript-beginners-guide/)
