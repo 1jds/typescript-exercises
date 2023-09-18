@@ -252,7 +252,7 @@ So, in a sense, while using a union might be useful (or even necessary) it also 
 > TypeScript has a specific syntax for typing function parameters and return values.
   <br><em>W3 Schools</em>
 
-
+This [web article](https://dmitripavlutin.com/typescript-function-type/) by Dmitri Pavlutin contains some useful examples of function types in TypeScript. 
 
 #### Void
 For functions which don't return a 'value' <em>per se</em>, such as those which only trigger side-effects such as a `console.log`, then the return type can be set to `void`.
