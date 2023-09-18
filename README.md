@@ -252,6 +252,8 @@ So, in a sense, while using a union might be useful (or even necessary) it also 
 > TypeScript has a specific syntax for typing function parameters and return values.
   <br><em>W3 Schools</em>
 
+This helps avoid bugs, but also lets other developers know what, for example, the expected types are for function variables. This makes the code more transparent for others, or one's future self.
+
 This [web article](https://dmitripavlutin.com/typescript-function-type/) by Dmitri Pavlutin contains some useful examples of function types in TypeScript. 
 
 #### Void
