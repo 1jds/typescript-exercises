@@ -267,7 +267,7 @@ function addNum(a + b) {
 becomes
 
 ```ts
-function addNum(a:number, b:number): number {
+function addNum(a: number, b: number): number {
   return a + b
 }
 ```
