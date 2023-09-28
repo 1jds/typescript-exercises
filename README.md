@@ -241,7 +241,7 @@ printStatusCode('404');
 // Source: W3 Schools
 ```
 
-#### Problems with using unions
+#### Possible problems with using unions
 
 Using union types opens the door to potential difficulties. For example, (in the example above) if the error code coming in is of type `number` but the function it's coming into employs string methods on the parameter then there will be errors.
 
