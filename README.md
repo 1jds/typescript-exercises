@@ -254,10 +254,32 @@ So, in a sense, while using a union might be useful (or even necessary) it also 
 
 This helps avoid bugs, but also lets other developers know what, for example, the expected types are for function variables. This makes the code more transparent for others, or one's future self.
 
-This [web article](https://dmitripavlutin.com/typescript-function-type/) by Dmitri Pavlutin contains some useful examples of function types in TypeScript. 
+This [web article](https://dmitripavlutin.com/typescript-function-type/) by Dmitri Pavlutin contains some useful examples of function types in TypeScript.
+
+Here is an example of a Vanilla JavaScript function followed by a TypeScript function:
+
+```js
+function addNum(a + b) {
+  return a + b
+}
+```
+
+becomes
+
+```ts
+function addNum(a: number, b: number): number {
+  return a + b
+}
+```
 
 #### Void
-For functions which don't return a 'value' <em>per se</em>, such as those which only trigger side-effects such as a `console.log`, then the return type can be set to `void`.
+For functions which don't return a 'value' <em>per se</em>, such as those which only trigger side-effects such as a `console.log`, then the return type can be set to `void`. E.g.
+
+```ts
+function log(message: string | number): void {
+  console.log(message)
+}
+```
 
 ### Implicit Typing
 If no type is explicitly assigned to, for e.g., a variable, then TypeScript will implicity assign one. For example, for the code below, TypeScript would infer that `name` is of type `string` because of the value with which it is initialised.
