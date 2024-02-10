@@ -287,6 +287,9 @@ If no type is explicitly assigned to, for e.g., a variable, then TypeScript will
 let name = 'John';
 ```
 
+## React
+- There are a number of things to be aware of when using TypeScript with React. One is that you need to be prepared for 'weird' types such as DOM objects, &c. More on this later (to be edited and details given...)
+
 ### Resources
 
 #### The Docs!
